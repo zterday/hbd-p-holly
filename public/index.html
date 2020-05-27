@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,17 +14,27 @@
     <script defer src="/__/firebase/7.14.5/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <style media="screen">
       body {
         background: #eceff1;
@@ -34,7 +43,8 @@
         margin: 0;
         padding: 0;
       }
-      #message, #mayinner {
+      #message,
+      #mayinner {
         background: white;
         max-width: 360px;
         margin: 100px auto 16px;
@@ -98,16 +108,14 @@
         }
       }
       .box {
-        box-shadow:
-        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 100px 80px rgba(0, 0, 0, 0.12)
-      ;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       }
-      .hidden { display: none; }
+      .hidden {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -150,12 +158,6 @@
       <marquee
         style="font-size: 48px; font-style: italic; text-decoration: underline;"
       >
-        พี่ฮอลอาจจะกำลังรอ</marquee
-      >
-      <img src="./phollwait.jpg" />
-      <marquee
-        style="font-size: 48px; font-style: italic; text-decoration: underline;"
-      >
         หรือฮอลอาจจะกำลังนั่ง</marquee
       >
       <img src="./sitdown.jpg" />
@@ -169,49 +171,74 @@
       <div id="mayinner">
         <script type="text/javascript">
           var clicks = 0;
-          const v = ['dark', 'light', 'primary', 'secondary', 'danger', 'success', 'warning']
+          const v = [
+            'dark',
+            'light',
+            'primary',
+            'secondary',
+            'danger',
+            'success',
+            'warning',
+          ];
           function eiei() {
-            var number = document.getElementById("may.num");
-            var btn = document.getElementById("may.btn");
-            var button = document.getElementById("may.button");
+            var number = document.getElementById('may.num');
+            var btn = document.getElementById('may.btn');
+            var button = document.getElementById('may.button');
             clicks += 1;
 
             var w = window.innerWidth;
             var h = window.innerHeight;
-            var left = (Math.floor(Math.random() * (w-400) + 200));
-            var top = (Math.floor(Math.random() * (h-120) + 60));
-            btn.style = "position: fixed; top: "+top+"px; left: "+left+"px; display: flex;"
-            button.className = "btn btn-lg btn-"+v[Math.floor(Math.random() * (v.length - 1))];
+            var left = Math.floor(Math.random() * (w - 400) + 200);
+            var top = Math.floor(Math.random() * (h - 120) + 60);
+            btn.style =
+              'position: fixed; top: ' +
+              top +
+              'px; left: ' +
+              left +
+              'px; display: flex;';
+            button.className =
+              'btn btn-lg btn-' + v[Math.floor(Math.random() * (v.length - 1))];
 
-            number.style = "font-size: " + ((clicks*5)+40) + "px;"
+            number.style = 'font-size: ' + (clicks * 5 + 40) + 'px;';
             number.innerHTML = clicks;
-            document.getElementById("may").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+            document.getElementById('may').scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+              inline: 'nearest',
+            });
 
             if (clicks === 30) {
-              button.className = "hidden"
-              number.style = "font-size: 200px; color: pink;"
+              button.className = 'hidden';
+              number.style = 'font-size: 200px; color: pink;';
               // var btn2 = document.getElementById("may.2")
-              document.getElementById("may.2").className = "";
-              document.getElementById("may.a").className = "";
-              document.getElementById("may.b").className = "";
+              document.getElementById('may.2').className = '';
+              document.getElementById('may.a').className = '';
+              document.getElementById('may.b').className = '';
             } else if (clicks >= 29) {
-              button.innerHTML = "Finally....";
+              button.innerHTML = 'Finally....';
             } else if (clicks >= 25) {
-              button.innerHTML = "Almost There!";
+              button.innerHTML = 'Almost There!';
             } else if (clicks >= 20) {
-              button.innerHTML = "You can do it!";
+              button.innerHTML = 'You can do it!';
             } else if (clicks >= 10) {
-              button.innerHTML = "And more!";
+              button.innerHTML = 'And more!';
             } else if (clicks >= 5) {
-              button.innerHTML = "More!";
+              button.innerHTML = 'More!';
             } else {
-              button.innerHTML = "Click me again!";
+              button.innerHTML = 'Click me again!';
             }
-          };
+          }
         </script>
         <div id="may.btn" style="display: flex; justify-content: center;">
           <div class="box" style="border-radius: 5px;">
-            <button id="may.button" class="btn btn-lg btn-warning" type="button" onClick="eiei()">Click me</button>
+            <button
+              id="may.button"
+              class="btn btn-lg btn-warning"
+              type="button"
+              onClick="eiei()"
+            >
+              Click me
+            </button>
           </div>
         </div>
         <div style="margin: 20px;">
@@ -221,56 +248,98 @@
         </div>
         <div id="may.2" class="hidden">
           <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-              aria-controls="collapseExample">
+            <a
+              class="btn btn-primary"
+              data-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
               click me!
             </a>
           </p>
           <div class="collapse" id="collapseExample">
             <div class="card card-body">
               <p>
-                <a class="btn btn-info" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
-                  aria-controls="collapseExample2">
+                <a
+                  class="btn btn-info"
+                  data-toggle="collapse"
+                  href="#collapseExample2"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample2"
+                >
                   click me!
                 </a>
               </p>
               <div class="collapse" id="collapseExample2">
                 <div class="card card-body">
                   <p>
-                    <a class="btn btn-light" data-toggle="collapse" href="#collapseExample3" role="button"
-                      aria-expanded="false" aria-controls="collapseExample3">
+                    <a
+                      class="btn btn-light"
+                      data-toggle="collapse"
+                      href="#collapseExample3"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="collapseExample3"
+                    >
                       click me!
                     </a>
                   </p>
                   <div class="collapse" id="collapseExample3">
                     <div class="card card-body">
                       <p>
-                        <a class="btn btn-secondary" data-toggle="collapse" href="#collapseExample4" role="button"
-                          aria-expanded="false" aria-controls="collapseExample4">
+                        <a
+                          class="btn btn-secondary"
+                          data-toggle="collapse"
+                          href="#collapseExample4"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="collapseExample4"
+                        >
                           click me!
                         </a>
                       </p>
                       <div class="collapse" id="collapseExample4">
                         <div class="card card-body">
                           <p>
-                            <a class="btn btn-dark" data-toggle="collapse" href="#collapseExample5" role="button"
-                              aria-expanded="false" aria-controls="collapseExample5">
+                            <a
+                              class="btn btn-dark"
+                              data-toggle="collapse"
+                              href="#collapseExample5"
+                              role="button"
+                              aria-expanded="false"
+                              aria-controls="collapseExample5"
+                            >
                               click me!
                             </a>
                           </p>
                           <div class="collapse" id="collapseExample5">
                             <div class="card card-body">
                               <p>
-                                <a class="btn btn-danger" data-toggle="collapse" href="#collapseExample6" role="button"
-                                  aria-expanded="false" aria-controls="collapseExample6">
+                                <a
+                                  class="btn btn-danger"
+                                  data-toggle="collapse"
+                                  href="#collapseExample6"
+                                  role="button"
+                                  aria-expanded="false"
+                                  aria-controls="collapseExample6"
+                                >
                                   click me!
                                 </a>
                               </p>
                               <div class="collapse" id="collapseExample6">
                                 <div class="card card-body">
                                   <p>
-                                    <a class="btn btn-success" data-toggle="collapse" href="#collapseExample7" role="button"
-                                      aria-expanded="false" aria-controls="collapseExample7">
+                                    <a
+                                      class="btn btn-success"
+                                      data-toggle="collapse"
+                                      href="#collapseExample7"
+                                      role="button"
+                                      aria-expanded="false"
+                                      aria-controls="collapseExample7"
+                                    >
                                       click me!
                                     </a>
                                   </p>
@@ -324,5 +393,4 @@
       });
     </script>
   </body>
-
 </html>
