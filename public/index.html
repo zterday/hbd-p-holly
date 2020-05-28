@@ -273,6 +273,71 @@
       border: 1px solid #ccc;
       border-top: none;
     }
+
+    #jame {
+      position: relative;
+      height: 600px;
+      background-color: blue;
+      margin: auto;
+      margin-top: 30px;
+      width: 500px;
+    }
+
+    #jame-cake-top {
+      position: absolute;
+      top: 0;
+      width: 500px;
+      height: 200px;
+      background-color: pink;
+      border-radius: 100%;
+    }
+
+    #jame-cake-middle {
+      position: absolute;
+      top: 100px;
+      width: 500px;
+      height: 400px;
+      background-color: pink;
+    }
+
+    #jame-cake-bottom {
+      position: absolute;
+      bottom: 0;
+      width: 500px;
+      height: 200px;
+      background-color: pink;
+      border-radius: 100%;
+    }
+
+    #jame-candles {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 500px;
+      top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .jame-candle {
+      position: relative;
+      height: 30px;
+      width: 10px;
+      background-color: yellow;
+      z-index: 10;
+      margin: 20px;
+    }
+
+    .jame-candle-light {
+      position: absolute;
+      top: -40px;
+      left: -10px;
+      font-size: 30px; 
+    }
+
+    #jame-message {
+      margin-top: 180px;
+      color: purple;
+    }
   </style>
 </head>
 
@@ -742,6 +807,42 @@ function openCity(evt, cityName) {
           'Error loading the Firebase SDK, check the console.';
       }
     });
+  </script>
+
+  <div id="jame">
+    <marquee id="jame-message">Happy Birthday P'Holly Happy Birthday P'Holly Happy Birthday P'Holly</marquee>
+    <div id="jame-cake-top"></div>
+    <div id="jame-cake-middle"></div>
+    <div id="jame-cake-bottom"></div>
+    <div id="jame-candles">
+      <div class="jame-candle">
+        <span class="jame-candle-light" onmouseover="blowCandle(this)">🔥</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var remainingCandles = 30;
+    var jameCakeTop = document.getElementById('jame-cake-top')
+    var jameCakeMiddle = document.getElementById('jame-cake-middle')
+    var jameCakeBottom = document.getElementById('jame-cake-bottom')
+    var jameCandles = document.getElementById('jame-candles')
+    var jameCandle = document.getElementsByClassName('jame-candle')[0]
+
+    for (var jameI = 0; jameI < 29; jameI++) {
+      jameCandles.appendChild(jameCandle.cloneNode(true))
+    }
+
+    function blowCandle(candle) {
+      candle.remove()
+      remainingCandles -= 1
+
+      if (remainingCandles === 0) {
+        jameCakeTop.remove()
+        jameCakeMiddle.remove()
+        jameCakeBottom.remove()
+      }
+    }
   </script>
 </body>
 
