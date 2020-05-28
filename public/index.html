@@ -26,6 +26,7 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <style media="screen">
     body {
       background: #eceff1;
@@ -207,6 +208,16 @@
       /* position: absolute; */
       width: 100%;
       cursor: move;
+    }
+
+    .config {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .config h3 {
+      flex: 1;
     }
   </style>
 </head>
@@ -541,7 +552,34 @@
       </iframe>
     </div>
   </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide config"><img src="./bts_01.jpeg" />
+        <H3>HBD</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_02.jpeg" />
+        <H3>na</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_03.jpeg" />
+        <H3>kub</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_04.jpeg" />
+        <H3>P'Holly</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_05.jpeg" />
+        <H3>Wish all the best with you.</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_06.jpg" />
+        <H3>From CNR</H3>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
   <script>
+    var swiper = new Swiper('.swiper-container');
     document.addEventListener('DOMContentLoaded', function () {
       // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       // // The Firebase SDK is initialized and available here!
