@@ -26,6 +26,7 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <style media="screen">
     body {
       background: #eceff1;
@@ -207,6 +208,52 @@
       /* position: absolute; */
       width: 100%;
       cursor: move;
+    }
+
+    .config {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .config h3 {
+      flex: 1;
+    }
+
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
     }
   </style>
 </head>
@@ -528,6 +575,42 @@
     <div>ขอให้มีความสุขมากๆนะคะ พบเจอแต่เรื่องดีๆ ชีวิตร่มเย็นเป็นสุขเหมือนดั่งฮอลคูล</div>
     <div>เยิฟฟฟฟฟฟฟฟ 💕</div>
   </div>
+  <div id="sun" style="width: 100%;">
+    <marquee behavior="alternate" style="font-size: 80px;">
+      <div style="width: 100%; text-align: center;">
+        <img src="./holly.jpg" width="430" height="400" alt="wow" />
+        <div>Happy Birthday P'Holly</div>
+      </div>
+    </marquee>
+    <div style="width:100%;height:0;padding-bottom:71%;position:relative;">
+      <iframe src="https://giphy.com/embed/IQF90tVlBIByw" width="100%" height="100%" style="position:absolute"
+        frameBorder="0" class="giphy-embed" allowFullScreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide config"><img src="./bts_01.jpeg" />
+        <H3>HBD</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_02.jpeg" />
+        <H3>na</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_03.jpeg" />
+        <H3>kub</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_04.jpeg" />
+        <H3>P'Holly</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_05.jpeg" />
+        <H3>Wish all the best with you.</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_06.jpg" />
+        <H3>From CNR</H3>
+      </div>
+    </div>
+  </div>
 
   <div id="bas" style="margin: 10px">
     <div style="width:100%; height: 100%;">
@@ -565,23 +648,26 @@
     <br>
   </div>
 
-  <script>
-    function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-  </script>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
   <script>
+    var swiper = new Swiper('.swiper-container');
     document.addEventListener('DOMContentLoaded', function () {
       // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       // // The Firebase SDK is initialized and available here!
