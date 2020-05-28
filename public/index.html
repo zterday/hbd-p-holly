@@ -1,442 +1,411 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>สุขสันต์วันเกิดพี่ฮอลนะคะ</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.14.5/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.14.5/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.14.5/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.14.5/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.14.5/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <style media="screen">
-      body {
-        background: #eceff1;
-        color: rgba(0, 0, 0, 0.87);
-        font-family: Roboto, Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      #message,
-      #mayinner {
-        background: white;
-        max-width: 360px;
-        margin: 100px auto 16px;
-        padding: 32px 24px;
-        border-radius: 3px;
-      }
-      #message h2 {
-        color: #ffa100;
-        font-weight: bold;
-        font-size: 16px;
-        margin: 0 0 8px;
-      }
-      #message h1 {
-        font-size: 22px;
-        font-weight: 300;
-        color: rgba(0, 0, 0, 0.6);
-        margin: 0 0 16px;
-      }
-      #message p {
-        line-height: 140%;
-        margin: 16px 0 24px;
-        font-size: 14px;
-      }
-      #message a {
-        display: block;
-        text-align: center;
-        background: #039be5;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        padding: 16px;
-        border-radius: 4px;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>สุขสันต์วันเกิดพี่ฮอลนะคะ</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.14.5/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.14.5/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.14.5/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.14.5/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.14.5/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <style media="screen">
+    body {
+      background: #eceff1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #message,
+    #mayinner {
+      background: white;
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #message p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #message a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #message,
+    #message-tanoy,
+    #message-tanoy2,
+    #message a,
+    #mayinner {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    #may {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 100px;
+    }
+
+    #mayinner a {
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+
+      body,
       #message,
       #message-tanoy,
-      #message-tanoy2,
-      #message a,
-      #mayinner {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      }
-      #load {
-        color: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        font-size: 13px;
-      }
-      #may {
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 100px;
-      }
-      #mayinner a {
-        width: 100%;
-      }
-      @media (max-width: 600px) {
-        body,
-        #message, #message-tanoy, #message-tanoy2 {
-          margin-top: 0;
-          background: white;
-          box-shadow: none;
-        }
-        body {
-          border-top: 16px solid #ffa100;
-        }
-      }
-      .box {
-        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-      }
-      .hidden { display: none; }
-      #tanoi {
-        width: 100vw;
-        height: 80vh;
-        background-image: url('./BTS.jpg');
-        background-color: #f1f1f1;
-        border: 1px solid #d3d3d3;
-        text-align: center;
-      }
-      #tanoy{
-        position: absolute;
-        text-align: center;
-        z-index: 9;
-        padding: 10px;
-        cursor: move;
-        width: 100%;
-        height: 100%;
-      }
-      #tanoy2 {
-        position: absolute;
-        text-align: center;
-        z-index: 9;
-        padding: 10px;
-        cursor: move;
-        width: 40%;
-        height: 100%;
-      }
-      #message-tanoy, #message-tanoy2 {
-        background: white;
-        max-width: 400px;
-        padding: 32px 24px;
-        border-radius: 3px;
-      }
       #message-tanoy2 {
-        background: bisque;
-        z-index: 10;
-        position: absolute;
-        text-align: center;
-        cursor: move;
-        min-width: 90vh;
-      }
-      .tanoi-area-1 {
-        position: relative;
-        width: 100%;
-        margin: 20px auto;
-      }
-      .tanoi-area-2 {
-        transform: translate(50%, 150%);
-        position: absolute;
-        width: 100%;
-      }
-      .tanoi-area-3 {
-        transform: translate(100%, 300%);
-        position: absolute;
-        width: 100%;
-      }
-      .tanoi-area-4 {
-        transform: translate(190%, 100%);
-        position: absolute;
-        width: 100%;
-      }
-      .tanoi-area-5 {
-        transform: translate(-30%, 60%);
-        position: absolute;
-        width: 100%;
-      }
-      .tanoi-area-6 {
-        /* transform: translate(150%, 100%); */
-        /* position: absolute; */
-        width: 100%;
-        cursor: move;
-      }
-      #bomb {
-        display: flex;
+        margin-top: 0;
+        background: white;
+        box-shadow: none;
       }
 
-      .bomb-box-message-1 {
-        background-color: red;
-        height: 200px;
-        width: 200px;
+      body {
+        border-top: 16px solid #ffa100;
       }
-      .bomb-box-message-1:hover {
-        background-color: blue;
-      }
-      .center {
-        margin: auto;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <marquee
-        style="
+    }
+
+    .box {
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #tanoi {
+      width: 100vw;
+      height: 80vh;
+      background-image: url('./BTS.jpg');
+      background-color: #f1f1f1;
+      border: 1px solid #d3d3d3;
+      text-align: center;
+    }
+
+    #tanoy {
+      position: absolute;
+      text-align: center;
+      z-index: 9;
+      padding: 10px;
+      cursor: move;
+      width: 100%;
+      height: 100%;
+    }
+
+    #tanoy2 {
+      position: absolute;
+      text-align: center;
+      z-index: 9;
+      padding: 10px;
+      cursor: move;
+      width: 40%;
+      height: 100%;
+    }
+
+    #message-tanoy,
+    #message-tanoy2 {
+      background: white;
+      max-width: 400px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message-tanoy2 {
+      background: bisque;
+      z-index: 10;
+      position: absolute;
+      text-align: center;
+      cursor: move;
+      min-width: 90vh;
+    }
+
+    .tanoi-area-1 {
+      position: relative;
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    .tanoi-area-2 {
+      transform: translate(50%, 150%);
+      position: absolute;
+      width: 100%;
+    }
+
+    .tanoi-area-3 {
+      transform: translate(100%, 300%);
+      position: absolute;
+      width: 100%;
+    }
+
+    .tanoi-area-4 {
+      transform: translate(190%, 100%);
+      position: absolute;
+      width: 100%;
+    }
+
+    .tanoi-area-5 {
+      transform: translate(-30%, 60%);
+      position: absolute;
+      width: 100%;
+    }
+
+    .tanoi-area-6 {
+      /* transform: translate(150%, 100%); */
+      /* position: absolute; */
+      width: 100%;
+      cursor: move;
+    }
+
+    .config {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .config h3 {
+      flex: 1;
+    }
+    
+    #bomb {
+      display: flex;
+    }
+
+    .bomb-box-message-1 {
+      background-color: red;
+      height: 200px;
+      width: 200px;
+    }
+    .bomb-box-message-1:hover {
+      background-color: blue;
+    }
+    .center {
+      margin: auto;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="message">
+    <marquee style="
           font-style: italic;
           text-decoration: underline;
           background-color: black;
           color: chartreuse;
           font-size: 38px;
-        "
-      >
-        🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥HBD P'Holly🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-      </marquee>
-      <img src="./pholly.jpg" />
-      <marquee
-        style="font-size: 48px; font-style: italic; text-decoration: underline;"
-      >
-        ตอนนี้พี่กำลังทำอะไรอยู่น๊าา
-      </marquee>
-      <marquee
-        style="font-size: 48px; font-style: italic; text-decoration: underline;"
-      >
-        พี่ฮอลอาจจะกำลังกิน</marquee
-      >
-      <img src="./eat.jpg" />
-      <marquee
-        style="font-size: 48px; font-style: italic; text-decoration: underline;"
-      >
-        พี่ฮอลอาจจะกำลังโมโห</marquee
-      >
-      <img src="./phollangry.jpg" />
-      <marquee
-        style="font-size: 48px; font-style: italic; text-decoration: underline;"
-      >
-        พี่ฮอลอาจจะกำลังยิ้ม</marquee
-      >
-      <img src="./phollsmile.jpg" />
-      <marquee
-        style="font-size: 48px; font-style: italic; text-decoration: underline;"
-      >
-        หรือฮอลอาจจะกำลังนั่ง</marquee
-      >
-      <img src="./sitdown.jpg" />
-      <marquee
-        style="font-size: 48px; font-style: italic; text-decoration: underline;"
-        >ถึงจะทำอะไรอยู่หนูก็ขอให้พี่มีความสุขมากๆ สุขสันต์วันเกิดพี่ฮอลนะคะ
-      </marquee>
-    </div>
+        ">
+      🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥HBD P'Holly🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    </marquee>
+    <img src="./pholly.jpg" />
+    <marquee style="font-size: 48px; font-style: italic; text-decoration: underline;">
+      ตอนนี้พี่กำลังทำอะไรอยู่น๊าา
+    </marquee>
+    <marquee style="font-size: 48px; font-style: italic; text-decoration: underline;">
+      พี่ฮอลอาจจะกำลังกิน</marquee>
+    <img src="./eat.jpg" />
+    <marquee style="font-size: 48px; font-style: italic; text-decoration: underline;">
+      พี่ฮอลอาจจะกำลังโมโห</marquee>
+    <img src="./phollangry.jpg" />
+    <marquee style="font-size: 48px; font-style: italic; text-decoration: underline;">
+      พี่ฮอลอาจจะกำลังยิ้ม</marquee>
+    <img src="./phollsmile.jpg" />
+    <marquee style="font-size: 48px; font-style: italic; text-decoration: underline;">
+      หรือฮอลอาจจะกำลังนั่ง</marquee>
+    <img src="./sitdown.jpg" />
+    <marquee style="font-size: 48px; font-style: italic; text-decoration: underline;">
+      ถึงจะทำอะไรอยู่หนูก็ขอให้พี่มีความสุขมากๆ สุขสันต์วันเกิดพี่ฮอลนะคะ
+    </marquee>
+  </div>
 
-    <div id="may">
-      <div id="mayinner">
-        <script type="text/javascript">
-          var clicks = 0;
-          const v = [
-            'dark',
-            'light',
-            'primary',
-            'secondary',
-            'danger',
-            'success',
-            'warning',
-          ];
-          function eiei() {
-            var number = document.getElementById('may.num');
-            var btn = document.getElementById('may.btn');
-            var button = document.getElementById('may.button');
-            clicks += 1;
+  <div id="may">
+    <div id="mayinner">
+      <script type="text/javascript">
+        var clicks = 0;
+        const v = [
+          'dark',
+          'light',
+          'primary',
+          'secondary',
+          'danger',
+          'success',
+          'warning',
+        ];
+        function eiei() {
+          var number = document.getElementById('may.num');
+          var btn = document.getElementById('may.btn');
+          var button = document.getElementById('may.button');
+          clicks += 1;
 
-            var w = window.innerWidth;
-            var h = window.innerHeight;
-            var left = Math.floor(Math.random() * (w - 400) + 200);
-            var top = Math.floor(Math.random() * (h - 120) + 60);
-            btn.style =
-              'position: fixed; top: ' +
-              top +
-              'px; left: ' +
-              left +
-              'px; display: flex;';
-            button.className =
-              'btn btn-lg btn-' + v[Math.floor(Math.random() * (v.length - 1))];
+          var w = window.innerWidth;
+          var h = window.innerHeight;
+          var left = Math.floor(Math.random() * (w - 400) + 200);
+          var top = Math.floor(Math.random() * (h - 120) + 60);
+          btn.style =
+            'position: fixed; top: ' +
+            top +
+            'px; left: ' +
+            left +
+            'px; display: flex;';
+          button.className =
+            'btn btn-lg btn-' + v[Math.floor(Math.random() * (v.length - 1))];
 
-            number.style = 'font-size: ' + (clicks * 5 + 40) + 'px;';
-            number.innerHTML = clicks;
-            document.getElementById('may').scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-              inline: 'nearest',
-            });
+          number.style = 'font-size: ' + (clicks * 5 + 40) + 'px;';
+          number.innerHTML = clicks;
+          document.getElementById('may').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+          });
 
-            if (clicks === 30) {
-              button.className = 'hidden';
-              number.style = 'font-size: 200px; color: pink;';
-              // var btn2 = document.getElementById("may.2")
-              document.getElementById('may.2').className = '';
-              document.getElementById('may.a').className = '';
-              document.getElementById('may.b').className = '';
-            } else if (clicks >= 29) {
-              button.innerHTML = 'Finally....';
-            } else if (clicks >= 25) {
-              button.innerHTML = 'Almost There!';
-            } else if (clicks >= 20) {
-              button.innerHTML = 'You can do it!';
-            } else if (clicks >= 10) {
-              button.innerHTML = 'And more!';
-            } else if (clicks >= 5) {
-              button.innerHTML = 'More!';
-            } else {
-              button.innerHTML = 'Click me again!';
-            }
+          if (clicks === 30) {
+            button.className = 'hidden';
+            number.style = 'font-size: 200px; color: pink;';
+            // var btn2 = document.getElementById("may.2")
+            document.getElementById('may.2').className = '';
+            document.getElementById('may.a').className = '';
+            document.getElementById('may.b').className = '';
+          } else if (clicks >= 29) {
+            button.innerHTML = 'Finally....';
+          } else if (clicks >= 25) {
+            button.innerHTML = 'Almost There!';
+          } else if (clicks >= 20) {
+            button.innerHTML = 'You can do it!';
+          } else if (clicks >= 10) {
+            button.innerHTML = 'And more!';
+          } else if (clicks >= 5) {
+            button.innerHTML = 'More!';
+          } else {
+            button.innerHTML = 'Click me again!';
           }
-        </script>
-        <div id="may.btn" style="display: flex; justify-content: center;">
-          <div class="box" style="border-radius: 5px;">
-            <button
-              id="may.button"
-              class="btn btn-lg btn-warning"
-              type="button"
-              onClick="eiei()"
-            >
-              Click me
-            </button>
-          </div>
+        }
+      </script>
+      <div id="may.btn" style="display: flex; justify-content: center;">
+        <div class="box" style="border-radius: 5px;">
+          <button id="may.button" class="btn btn-lg btn-warning" type="button" onClick="eiei()">
+            Click me
+          </button>
         </div>
-        <div style="margin: 20px;">
-          <h1 class="hidden" id="may.a">✨ ⭐ ✨ ⭐ ✨</h1>
-          <h1 id="may.num">0</h1>
-          <h1 class="hidden" id="may.b">✨ ⭐ ✨ ⭐ ✨</h1>
-        </div>
-        <div id="may.2" class="hidden">
-          <p>
-            <a
-              class="btn btn-primary"
-              data-toggle="collapse"
-              href="#collapseExample"
-              role="button"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              click me!
-            </a>
-          </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-              <p>
-                <a
-                  class="btn btn-info"
-                  data-toggle="collapse"
-                  href="#collapseExample2"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseExample2"
-                >
-                  click me!
-                </a>
-              </p>
-              <div class="collapse" id="collapseExample2">
-                <div class="card card-body">
-                  <p>
-                    <a
-                      class="btn btn-light"
-                      data-toggle="collapse"
-                      href="#collapseExample3"
-                      role="button"
-                      aria-expanded="false"
-                      aria-controls="collapseExample3"
-                    >
-                      click me!
-                    </a>
-                  </p>
-                  <div class="collapse" id="collapseExample3">
-                    <div class="card card-body">
-                      <p>
-                        <a
-                          class="btn btn-secondary"
-                          data-toggle="collapse"
-                          href="#collapseExample4"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="collapseExample4"
-                        >
-                          click me!
-                        </a>
-                      </p>
-                      <div class="collapse" id="collapseExample4">
-                        <div class="card card-body">
-                          <p>
-                            <a
-                              class="btn btn-dark"
-                              data-toggle="collapse"
-                              href="#collapseExample5"
-                              role="button"
-                              aria-expanded="false"
-                              aria-controls="collapseExample5"
-                            >
-                              click me!
-                            </a>
-                          </p>
-                          <div class="collapse" id="collapseExample5">
-                            <div class="card card-body">
-                              <p>
-                                <a
-                                  class="btn btn-danger"
-                                  data-toggle="collapse"
-                                  href="#collapseExample6"
-                                  role="button"
-                                  aria-expanded="false"
-                                  aria-controls="collapseExample6"
-                                >
-                                  click me!
-                                </a>
-                              </p>
-                              <div class="collapse" id="collapseExample6">
-                                <div class="card card-body">
-                                  <p>
-                                    <a
-                                      class="btn btn-success"
-                                      data-toggle="collapse"
-                                      href="#collapseExample7"
-                                      role="button"
-                                      aria-expanded="false"
-                                      aria-controls="collapseExample7"
-                                    >
-                                      click me!
-                                    </a>
-                                  </p>
-                                  <div class="collapse" id="collapseExample7">
-                                    <div class="card card-body">
-                                      <div>
-                                        HBD นะคะพี่ฮอลลี่ 💙 💙 💙
-                                      </div>
+      </div>
+      <div style="margin: 20px;">
+        <h1 class="hidden" id="may.a">✨ ⭐ ✨ ⭐ ✨</h1>
+        <h1 id="may.num">0</h1>
+        <h1 class="hidden" id="may.b">✨ ⭐ ✨ ⭐ ✨</h1>
+      </div>
+      <div id="may.2" class="hidden">
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            click me!
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <p>
+              <a class="btn btn-info" data-toggle="collapse" href="#collapseExample2" role="button"
+                aria-expanded="false" aria-controls="collapseExample2">
+                click me!
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body">
+                <p>
+                  <a class="btn btn-light" data-toggle="collapse" href="#collapseExample3" role="button"
+                    aria-expanded="false" aria-controls="collapseExample3">
+                    click me!
+                  </a>
+                </p>
+                <div class="collapse" id="collapseExample3">
+                  <div class="card card-body">
+                    <p>
+                      <a class="btn btn-secondary" data-toggle="collapse" href="#collapseExample4" role="button"
+                        aria-expanded="false" aria-controls="collapseExample4">
+                        click me!
+                      </a>
+                    </p>
+                    <div class="collapse" id="collapseExample4">
+                      <div class="card card-body">
+                        <p>
+                          <a class="btn btn-dark" data-toggle="collapse" href="#collapseExample5" role="button"
+                            aria-expanded="false" aria-controls="collapseExample5">
+                            click me!
+                          </a>
+                        </p>
+                        <div class="collapse" id="collapseExample5">
+                          <div class="card card-body">
+                            <p>
+                              <a class="btn btn-danger" data-toggle="collapse" href="#collapseExample6" role="button"
+                                aria-expanded="false" aria-controls="collapseExample6">
+                                click me!
+                              </a>
+                            </p>
+                            <div class="collapse" id="collapseExample6">
+                              <div class="card card-body">
+                                <p>
+                                  <a class="btn btn-success" data-toggle="collapse" href="#collapseExample7"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample7">
+                                    click me!
+                                  </a>
+                                </p>
+                                <div class="collapse" id="collapseExample7">
+                                  <div class="card card-body">
+                                    <div>
+                                      HBD นะคะพี่ฮอลลี่ 💙 💙 💙
                                     </div>
                                   </div>
                                 </div>
@@ -454,188 +423,239 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <H1> 😻 ลองเรียงคำอวยพรจากตะนอยสิ </H1>
-    <div id="tanoi">
-      <div id="tanoy">
-        <script type="text/javascript">
-          dragElement(document.getElementById("tanoy"));
-  
-          function dragElement(elmnt) {
-            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-            if (document.getElementById('message' + elmnt.id)) {
-              // if present, the header is where you move the DIV from:
-              document.getElementById('message' + elmnt.id).onmousedown = dragMouseDown;
-            } else {
-              // otherwise, move the DIV from anywhere inside the DIV:
-              elmnt.onmousedown = dragMouseDown;
-            }
-  
-            function dragMouseDown(e) {
-              e = e || window.event;
-              e.preventDefault();
-              // get the mouse cursor position at startup:
-              pos3 = e.clientX;
-              pos4 = e.clientY;
-              document.onmouseup = closeDragElement;
-              // call a function whenever the cursor moves:
-              document.onmousemove = elementDrag;
-            }
-  
-            function elementDrag(e) {
-              e = e || window.event;
-              e.preventDefault();
-              // calculate the new cursor position:
-              pos1 = pos3 - e.clientX;
-              pos2 = pos4 - e.clientY;
-              pos3 = e.clientX;
-              pos4 = e.clientY;
-              // set the element's new position:
-              elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-              elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-            }
-  
-            function closeDragElement() {
-              // stop moving when mouse button is released:
-              document.onmouseup = null;
-              document.onmousemove = null;
-            }
+  <H1> 😻 ลองเรียงคำอวยพรจากตะนอยสิ </H1>
+  <div id="tanoi">
+    <div id="tanoy">
+      <script type="text/javascript">
+        dragElement(document.getElementById("tanoy"));
+
+        function dragElement(elmnt) {
+          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+          if (document.getElementById('message' + elmnt.id)) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById('message' + elmnt.id).onmousedown = dragMouseDown;
+          } else {
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
           }
-        </script>
-        <div id="message-tanoy" class="tanoi-area-1">
-          <H5>สุขสันต์วันเข้าเลข 3 (อ๊ะ หยอกเล่น แฮร่) 😜</H5>
-        </div>
-        <div id="message-tanoy" class="tanoi-area-2">
-          <H5>ขอให้พี่ฮอลที่น่ารัก 🧚‍♀️</H5>
-        </div>
-        <div id="message-tanoy" class="tanoi-area-3">
-          สุขภาพแข็งแรง 💪
-        </div>
-        <div id="message-tanoy" class="tanoi-area-4">
-          <H5>ทั้งปีนี้ และตลอดไป</H5> 
-        </div>
-        <div id="message-tanoy" class="tanoi-area-5">
-          กินดีอยู่ดี
-        </div>
-      </div>
-      <div id="tanoy2">
-        <script type="text/javascript">
-          dragElement(document.getElementById("tanoy2"));
-    
-          function dragElement(elmnt) {
-            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-            if (document.getElementById('message' + elmnt.id)) {
-              // if present, the header is where you move the DIV from:
-              document.getElementById('message' + elmnt.id).onmousedown = dragMouseDown;
-            } else {
-              // otherwise, move the DIV from anywhere inside the DIV:
-              elmnt.onmousedown = dragMouseDown;
-            }
-  
-            function dragMouseDown(e) {
-              e = e || window.event;
-              e.preventDefault();
-              // get the mouse cursor position at startup:
-              pos3 = e.clientX;
-              pos4 = e.clientY;
-              document.onmouseup = closeDragElement;
-              // call a function whenever the cursor moves:
-              document.onmousemove = elementDrag;
-            }
-  
-            function elementDrag(e) {
-              e = e || window.event;
-              e.preventDefault();
-              // calculate the new cursor position:
-              pos1 = pos3 - e.clientX;
-              pos2 = pos4 - e.clientY;
-              pos3 = e.clientX;
-              pos4 = e.clientY;
-              // set the element's new position:
-              elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-              elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-            }
-  
-            function closeDragElement() {
-              // stop moving when mouse button is released:
-              document.onmouseup = null;
-              document.onmousemove = null;
-            }
+
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
           }
-        </script>
-        <div id="message-tanoy2" class="tanoi-area-6">
-          <H3>💝 💝 💝 💝 มั่งมีความสุก มันนี่ มันนี่ ย๊าา 💝 💝 💝 💝</H3>
-        </div>
-      </div>
-    </div>
 
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
 
-    <div id="toong" style="background:#e8e8e8;color:red; margin:20px 20px; padding:20px 20px;">
-      <div>HBD KRUB P'HOLLY 🔥</div>
-      <div>WISH YOU A HAPPY&HEALTHY LIFE</div>
-    </div>
-
-    <iframe width="0" height="0" src="https://www.youtube.com/embed/FXgBBsbKwMI?autoplay=1&start=29" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-    <div id="bomb">
-      <div class="bomb-box-message-1">
-        <div class="center">
-          <p style="font-size:80px; color: red;">สุข</p>
-        </div>
-      </div>
-      <div class="bomb-box-message-1">
-        <div class="center">
-          <p style="font-size:80px; color: red;">สันต์</p>
-        </div>
-      </div>
-      <div class="bomb-box-message-1">
-        <div class="center">
-          <p style="font-size:80px; color: red;">วัน</p>
-        </div>
-      </div>
-      <div class="bomb-box-message-1">
-        <div class="center">
-          <p style="font-size:80px; color: red;">เกิด</p>
-        </div>
-      </div>
-      <div class="bomb-box-message-1">
-        <div class="center">
-          <p style="font-size:50px; color: red;">นะครับ<br> พี่ฮอล</p>
-        </div>
-      </div>
-      <div class="bomb-box-message-1">
-        <div class="center">
-          <p style="font-size:20px; color: red;">มีความสุขมากๆนะครับ สุขภาพแข็งแรง แฮปปี้ๆตลอดปีนะค้าบบบ ❤️</p>
-        </div>
-      </div>
-    </div>
-
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(
-            (feature) => typeof app[feature] === 'function'
-          );
-          document.getElementById(
-            'load'
-          ).innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML =
-            'Error loading the Firebase SDK, check the console.';
+          function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
         }
-      });
-    </script>
-  </body>
+      </script>
+      <div id="message-tanoy" class="tanoi-area-1">
+        <H5>สุขสันต์วันเข้าเลข 3 (อ๊ะ หยอกเล่น แฮร่) 😜</H5>
+      </div>
+      <div id="message-tanoy" class="tanoi-area-2">
+        <H5>ขอให้พี่ฮอลที่น่ารัก 🧚‍♀️</H5>
+      </div>
+      <div id="message-tanoy" class="tanoi-area-3">
+        สุขภาพแข็งแรง 💪
+      </div>
+      <div id="message-tanoy" class="tanoi-area-4">
+        <H5>ทั้งปีนี้ และตลอดไป</H5>
+      </div>
+      <div id="message-tanoy" class="tanoi-area-5">
+        กินดีอยู่ดี
+      </div>
+    </div>
+    <div id="tanoy2">
+      <script type="text/javascript">
+        dragElement(document.getElementById("tanoy2"));
+
+        function dragElement(elmnt) {
+          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+          if (document.getElementById('message' + elmnt.id)) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById('message' + elmnt.id).onmousedown = dragMouseDown;
+          } else {
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+          }
+
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+          }
+
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
+
+          function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+      </script>
+      <div id="message-tanoy2" class="tanoi-area-6">
+        <H3>💝 💝 💝 💝 มั่งมีความสุก มันนี่ มันนี่ ย๊าา 💝 💝 💝 💝</H3>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="toong" style="background:#e8e8e8;color:red; margin:20px 20px; padding:20px 20px;">
+    <div>HBD KRUB P'HOLLY 🔥</div>
+    <div>WISH YOU A HAPPY&HEALTHY LIFE</div>
+  </div>
+
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/FXgBBsbKwMI?autoplay=1&start=29" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <div id="bomb">
+    <div class="bomb-box-message-1">
+      <div class="center">
+        <p style="font-size:80px; color: red;">สุข</p>
+      </div>
+    </div>
+    <div class="bomb-box-message-1">
+      <div class="center">
+        <p style="font-size:80px; color: red;">สันต์</p>
+      </div>
+    </div>
+    <div class="bomb-box-message-1">
+      <div class="center">
+        <p style="font-size:80px; color: red;">วัน</p>
+      </div>
+    </div>
+    <div class="bomb-box-message-1">
+      <div class="center">
+        <p style="font-size:80px; color: red;">เกิด</p>
+      </div>
+    </div>
+    <div class="bomb-box-message-1">
+      <div class="center">
+        <p style="font-size:50px; color: red;">นะครับ<br> พี่ฮอล</p>
+      </div>
+    </div>
+    <div class="bomb-box-message-1">
+      <div class="center">
+        <p style="font-size:20px; color: red;">มีความสุขมากๆนะครับ สุขภาพแข็งแรง แฮปปี้ๆตลอดปีนะค้าบบบ ❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="milk" style="text-align: center;">
+    <H1>Happy Birthday to </H1>
+    <img width="500" height="500" src="./hollCool.jpg" /> <img width="500" height="500" src="./ly.jpg" />
+    <div>
+      <span>พี่ฮอล</span><span>ลี่</span>
+    </div>
+    <div>ขอให้มีความสุขมากๆนะคะ พบเจอแต่เรื่องดีๆ ชีวิตร่มเย็นเป็นสุขเหมือนดั่งฮอลคูล</div>
+    <div>เยิฟฟฟฟฟฟฟฟ 💕</div>
+  </div>
+  <div id="sun" style="width: 100%;">
+    <marquee behavior="alternate" style="font-size: 80px;">
+      <div style="width: 100%; text-align: center;">
+        <img src="./holly.jpg" width="430" height="400" alt="wow" />
+        <div>Happy Birthday P'Holly</div>
+      </div>
+    </marquee>
+    <div style="width:100%;height:0;padding-bottom:71%;position:relative;">
+      <iframe src="https://giphy.com/embed/IQF90tVlBIByw" width="100%" height="100%" style="position:absolute"
+        frameBorder="0" class="giphy-embed" allowFullScreen>
+      </iframe>
+    </div>
+  </div>
+  
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide config"><img src="./bts_01.jpeg" />
+        <H3>HBD</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_02.jpeg" />
+        <H3>na</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_03.jpeg" />
+        <H3>kub</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_04.jpeg" />
+        <H3>P'Holly</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_05.jpeg" />
+        <H3>Wish all the best with you.</H3>
+      </div>
+      <div class="swiper-slide config"><img src="./bts_06.jpg" />
+        <H3>From CNR</H3>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container');
+    document.addEventListener('DOMContentLoaded', function () {
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      try {
+        let app = firebase.app();
+        let features = ['auth', 'database', 'messaging', 'storage'].filter(
+          (feature) => typeof app[feature] === 'function'
+        );
+        document.getElementById(
+          'load'
+        ).innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        document.getElementById('load').innerHTML =
+          'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body>
+
 </html>
